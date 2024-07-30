@@ -11,10 +11,15 @@ import { PlankSizeService} from "../../service/plank-size.service";
 })
 export class PlankSizeListComponent implements OnInit{
 
+  plankSizes: PlankSize[];
+
   constructor(private plankSizeService: PlankSizeService){
 
   }
-  ngOnInit(): void {
+  ngOnInit(){
+    this.plankSizeService.findAll().subscribe(data => {
+      this.plankSizes = data;
+    });
   }
 
 }

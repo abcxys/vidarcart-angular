@@ -1,1 +1,20 @@
-<p>plank-size-list works!</p>
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">width</th>
+        <th scope="col">sqft</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let plankSize of plankSizes">
+        <td>{{ plankSize.id }}</td>
+        <td>{{ plankSize.widthInInch }}</td>
+        <td>{{ plankSize.squarefootPerCarton }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
